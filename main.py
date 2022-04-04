@@ -1,5 +1,8 @@
 import discord
 import re
+import os
+
+TOKEN = os.getenv('COLOROLE_TOKEN')
 
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -46,4 +49,4 @@ class MyClient(discord.Client):
                 await message.channel.send('https://www.w3schools.com/colors/colors_hexadecimal.asp')
 
 client = MyClient()
-client.run('OTYwNDIwNjgyMzg1MjIzNjgw.YkqLdg.dhqr_--XPjo9Bf1h9vfb0AszFJU')
+client.run(TOKEN)
