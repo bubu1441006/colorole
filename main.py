@@ -9,9 +9,14 @@ class MyClient(discord.Client):
         if message.author == self.user:
             return
 
-        if message.content.startswith('#'):
-            col = message.content.upper()
+        if message.content.startswith('$#'):
+            col = message.content[1::].upper()
 
+            # quangbuiid = 420809158170902528;
+            # if message.author.id == quangbuiid:
+            #     await message.channel.send('del cho, haha')
+            #     return
+            
             print(col)
             if (re.match(r"^#[0-9A-F]{6}$", col)):
                 user = message.author
