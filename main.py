@@ -1,6 +1,5 @@
 import discord
 import re
-import os
 
 token_file = open('token.txt', 'r')
 TOKEN = token_file.readline()
