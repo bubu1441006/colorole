@@ -2,7 +2,8 @@ import discord
 import re
 import os
 
-TOKEN = os.getenv('COLOROLE_TOKEN')
+token_file = open('token.txt', 'r')
+TOKEN = token_file.readline()
 
 class MyClient(discord.Client):
     async def on_ready(self):
