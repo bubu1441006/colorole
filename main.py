@@ -73,7 +73,7 @@ class MyClient(discord.Client):
 
                 await user.add_roles(message.guild.get_role(rid))
             else:
-                await message.channel.send('https://www.w3schools.com/colors/colors_hexadecimal.asp')
+                await message.channel.send('#random or a valid hex color plz 🥺')
 
 client = MyClient()
 client.run(TOKEN)
